@@ -1,0 +1,63 @@
+<view class='user'>
+  <view class='firstlayout'>
+    <image src="{{img}}" class='firstimagestyle'></image>
+    <view class='firstfontstyle'>{{name}}</view>
+    <view class='secondlayout'>
+      <view class='secondlayoutitem'>
+        <view class='firstfontstyle'>积分：</view>
+        <view class='firstfontstyle'>{{scores}}</view>
+      </view>
+      <!--<view class='lineview'></view>-->
+      <view class='secondlayoutitem'>
+        <view class='firstfontstyle'>余额：</view>
+        <view class='firstfontstyle'>{{balance}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='user-item'>
+    <view class='item' bindtap='bindViewTapbasic'>
+      <image class='secondimagestyle' src='/images/personCenter/5.png'></image>
+      <view class=' item-title'>基本信息</view>
+      <image src='/images/personCenter/2.png' class='thirdimagestyle'></image>
+    </view>
+
+    <view class='item' bindtap='bindViewTapaddress'>
+      <image class='secondimagestyle' src='/images/personCenter/3.png'></image>
+      <view class=' item-title'>我的地址</view>
+      <image src='/images/personCenter/2.png' class='thirdimagestyle'></image>
+    </view>
+
+    <view class='item' bindtap="bindViewTap">
+      <image class='secondimagestyle' src='/images/personCenter/7.png'></image>
+      <view class=' item-title'>我的订单</view>
+      <image src='/images/personCenter/2.png' class='thirdimagestyle'></image>
+    </view>
+
+    <view class='item' bindtap="onShareTap">
+      <image class='secondimagestyle' src='/images/personCenter/4.png'></image>
+      <view class=' item-title'>分享推荐</view>
+      <image src='/images/personCenter/2.png' class='thirdimagestyle'></image>
+    </view>
+
+    <view class='item' bindtap='bindViewTapsetup'>
+      <image class='secondimagestyle' src='/images/personCenter/6.png'></image>
+      <view class='item-title'>关于我们</view>
+
+      <image src='/images/personCenter/2.png' class='thirdimagestyle'></image>
+    </view>
+  </view>
+</view>
+
+<view class="bg" bindtap='hideview' style='display:{{display}}'></view>
+<view class="show" bindtap='hideview' style='display:{{display}}'>
+  <view class='containera'>
+    <image class="imagesa" src="{{shareImgSrc}}"></image>
+    <view class='fourlayoutstylea'>
+      <button size="{{primarySize}}" bindtap="showLocal"> 保存分享图片 </button>
+    </view>
+    <view class="canvas-box">
+      <canvas canvas-id="myCanvas" style="width:100%;height:{{windowHeight}}px;"></canvas>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<view>  
+    <button type="primary" bindtap="modalinput">modal有输入框</button>   
+</view>  
+<modal hidden="{{hiddenmodalput}}" title="请输入验证码" confirm-text="提交" cancel-text="重置" bindcancel="cancel" bindconfirm="confirm">  
+    <input type='text'placeholder="请输入内容" auto-focus/>  
+</modal>  
